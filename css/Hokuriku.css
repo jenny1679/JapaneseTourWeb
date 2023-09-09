@@ -1,0 +1,226 @@
+/* 全螢幕影片+首頁 */
+
+* {
+    box-sizing: border-box;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    font-size: 1vw;
+    /* 為了執行JS 增加的 */
+    position: fixed;
+    bottom: 0;
+}
+
+.content h1, p {
+    font-family: 'Zen Antique Soft', serif;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 1vw;
+    padding: 10px;
+    border: none;
+    background: #00304c;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: #00304c;
+    font-weight: bolder;
+    animation-name: gradient;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes gradient {
+    0% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 90%, rgba(221,214,243,1) 100%);}
+   25% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 50%, rgba(221,214,243,1) 100%);}
+   50% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 20%, rgba(221,214,243,1) 100%);}
+   75% {background: linear-gradient(30deg, rgba(241,228,237,1) 0%, rgba(255,222,233,1) 15%, rgba(221,214,243,1) 100%);}
+   100% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 40%, rgba(221,214,243,1) 100%);}}
+
+/* 連續圖片頁面格式 */
+
+.carousel {
+    display: none;
+    height: 100%;
+}
+
+img {
+    height: 100vh;
+}
+
+.carousel-item .carousel-caption {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 2rem;
+}
+
+.carousel-caption {
+    font-size: 1vw;
+}
+
+.carousel-caption h3 {
+    padding: 1rem;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: beige;
+    text-shadow: 2px 2px 5px rgb(105, 104, 104);
+    font-family: 'Zen Antique Soft', serif;
+    border-radius: 5px;
+    margin: 0;
+    width: 12vw;
+}
+
+.carousel-caption p {
+    padding: 1rem;
+    color: beige;
+    background-color: rgba(150, 93, 98, 0.8);
+    text-shadow: 2px 2px 10px rgb(105, 104, 104);
+    font-family: 'Zen Antique Soft', serif;
+    border-right: 10px inset #965D62;
+    width: 33vw;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgba(51, 51, 51, 0.8);
+    overflow: hidden;
+    display: none;
+    /* 下方設定為固定在最上方 */
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    font-family: 'Kaisei Decol', serif;
+}
+
+span.material-icons {
+    font-size: 1.5vw;
+}
+
+/* Style the links inside the navigation bar */
+body {
+    margin: 0;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1.5vw;
+    text-decoration: none;
+    font-size: 1.4vw;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #85586F;
+    font-weight: bold;
+    /* color: #8294C4; */
+    animation-name: gradient;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes gradient {
+    0% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 90%, rgba(221,214,243,1) 100%);}
+   25% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 50%, rgba(221,214,243,1) 100%);}
+   50% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 20%, rgba(221,214,243,1) 100%);}
+   75% {background: linear-gradient(30deg, rgba(241,228,237,1) 0%, rgba(255,222,233,1) 15%, rgba(221,214,243,1) 100%);}
+   100% {background: linear-gradient(30deg, rgba(255,222,233,1) 15%, rgba(241,228,237,1) 40%, rgba(221,214,243,1) 100%);}}
+
+/* Add an active class to highlight the current page */
+.topnav a.book {
+    background-color: #85586F;
+    color: white;
+}
+
+.topnav a.book:hover {
+    color:#85586F;
+    font-weight: bold;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* 手機版的格式設定(一開始顯示的導覽列)
+When the screen is less than 768 pixels wide, hide all links, except for the first one ("BOOK"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 768px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    #icon {
+        float: right;
+        display: block;
+        font-size: 5vw;
+        padding: 1.5vw 5vw 1.5vw 5vw;
+    }
+
+    .topnav a {
+        font-size: 5vw;
+    }
+}
+
+/*手機版的格式設定(需點擊才能顯示的導覽列) 
+The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 768px) {
+    .topnav.responsive {
+        /* 不要設定position才可以讓區塊透明，且不會向下推擠 */
+        width: 100%;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive span.material-icons {
+        font-size: 5vw;
+        padding-right: 2vw;
+    }
+
+}
+
+    
+/* 手機版的格式設定(圖片連播的文字內容)  */
+@media screen and (max-width: 1440px) {   
+    .carousel-caption h3 {
+        width: 100%;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        font-size: 2.2vw;
+    }
+
+}

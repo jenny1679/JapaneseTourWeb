@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>日本旅遊</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Kaisei+Decol&family=Noto+Sans+TC&family=Rowdies:wght@300&family=Yuji+Syuku&family=Zen+Antique+Soft&display=swap');
+    </style>
+
+<body>
+
+    <!-- 放入nav -->
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active">首頁</a>
+        <a href="#">四國</a>
+        <a href="./Hokuriku.html">北陸</a>
+        <a href="#">東北</a>
+        <a href="#">北海道</a>
+        <a href="#">九州</a>
+        <a href="#">關東</a>
+        <a href="#">關西</a>
+        <a href="#">沖繩</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/首頁圖片1.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/首頁圖片2.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/首頁圖片3.jpg" class="d-block w-100">
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="text-center m-4" id="mainContent">
+        <h2>2023日本推薦行程</h2>
+    </div>
+
+
+    <div class="row m-1">
+        <div class="col-sm-12 col-md-3">
+            <div class="container">
+                <a href="#"><img src="./img/1.jpg" class="w-100"></a>
+                <p>【旅展特惠選】四國星發現．炙燒鰹魚體驗．絕景黑潮鐵道．雲邊寺纜車．天空之鏡．金刀比羅宮．土佐之鄉．弘人市場．高知城4天</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <div class="container">
+                <a href="#"><img src="./img/2.jpg" class="w-100"></a>
+                <p>【童心雙樂園】樂高樂園+水族館．大阪環球影城．伊賀流忍者秀．童話草屋根．近江八幡．清水寺．奈良餵萌鹿．名古屋城6天</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <div class="container">
+                <a href="./Hokuriku.html"><img src="./img/3.jpg" class="w-100"></a>
+                <p>【夏遊立山黑部】祕境上高地．童話合掌村．採果趣．牧歌之里花海．飛驒高山．螃蟹吃到飽．雙溫泉 5 天</p>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <div class="container">
+                <a href="#"><img src="./img/4.jpg" class="w-100"></a>
+                <p>周末出發【九州特惠選】湯布院童話小鎮．金鱗湖．柳川扁舟遊．懷舊門司港．太宰府旅人列車．溫泉泡湯．螃蟹吃到飽 5天</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

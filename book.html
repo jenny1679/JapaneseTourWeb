@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>立即參加</title>
+</head>
+
+<body style="background-image: url('img/book.jpg');">
+    <div class="container">
+        <form> <!-- action="" -->
+            <h2>Welcome</h2>
+            <p>請留下您的聯絡資訊，我們會有專人與您聯繫</p>
+            <hr>
+            <h3>聯絡資訊</h3>
+            <label for="fullName"><i class="fa fa-user"></i> 姓名</label>
+            <input type="text" id="fullName" name="fullName" placeholder="王大明">
+            <label for="phone"><i class="fa fa-institution"></i> 電話</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0988-123-123">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="john@gmail.com">
+            <label for="city"><i class="fa fa-address-card-o"></i> 居住城市</label>
+            <select id="city" name="city">
+                <option value="Taipei">台北市</option>
+                <option value="Taichung">台中市</option>
+                <option value="Kaohsiung">高雄市</option>
+                <option value="otherCity">其他縣市</option>
+            </select>
+            <input type="submit" value="確認送出" class="btn">
+        </form>
+    </div>
+</body>
+
+</html>
